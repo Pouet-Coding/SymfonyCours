@@ -1,0 +1,22 @@
+
+{% extends 'DemoBundle::base.html.twig' %}
+
+{% block page %}
+
+    <div>
+        <h2>Voici les messages</h2>
+
+        {% for message in messages %}
+            <div>
+                <h4>Auteur : {{ message.auteur | title }}</h4>
+
+                <p>
+                    Message : {{ message.message }},
+                    <i>publié à {{ message.date | date("j/m/Y") }}</i>
+                </p>
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

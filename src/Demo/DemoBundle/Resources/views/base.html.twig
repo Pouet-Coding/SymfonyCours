@@ -1,0 +1,24 @@
+
+{% extends '::base.html.twig' %}
+
+{% block body %}
+
+    <h1>Blog de Guillaume c'est moi</h1>
+
+    {% block menu %}
+        <div>
+            <h2>Menu</h2>
+
+            <nav>
+                <ul>
+                    <li><a href="{{ path('demo_accueil') }}">Accueil</a></li>
+                    <li><a href="{{ path('blog_envoyer_message') }}">Envoyer un message</a></li>
+                    <li><a href="{{ path('blog_afficher_message') }}">Afficher les messages</a></li>
+                </ul>
+            </nav>
+        </div>
+    {% endblock %}
+
+    {% block page %}{% endblock %}
+
+{% endblock %}

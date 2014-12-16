@@ -1,0 +1,16 @@
+demo_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: DemoBundle:Default:index }
+
+
+demo_accueil:
+    path:   /
+    defaults: { _controller: DemoBundle:Default:bonjour }
+
+blog_envoyer_message:
+    path:   /blog/envoyer/{mot}
+    defaults: { _controller: DemoBundle:Blog:envoyer, mot:"Vide" }
+
+blog_afficher_message:
+    path:   /blog/afficher
+    defaults: { _controller: DemoBundle:Blog:afficher }
